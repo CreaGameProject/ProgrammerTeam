@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour {
 
+    float x;
+    float y;
+    float z;
+
+    public int gravityPower = 15;
 
     Vector3 localGravity;
    
@@ -16,9 +21,13 @@ public class Gravity : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        GravityController();
+        localGravity.x = x;
+        localGravity.y = y;
+        localGravity.z = z;
+    }
 
     private void FixedUpdate()
     {
@@ -32,6 +41,16 @@ public class Gravity : MonoBehaviour {
 
     private void GravityController()
     {
-       
+        Vector3 pos = transform.position;
+        Vector3 defG = new Vector3(0,0,0);
+
+       float xDis = defG.x - pos.x;
+       float yDis = defG.y - pos.y;
+       float zDis = defG.z - pos.z;
+
+        float direction = Mathf.Sqrt(gravityPower/(xDis * xDis + yDis * yDis + zDis * zDis));
+        x = direction * xDis;
+        y = direction * yDis;
+        z = direction * zDis;
     }
 }
