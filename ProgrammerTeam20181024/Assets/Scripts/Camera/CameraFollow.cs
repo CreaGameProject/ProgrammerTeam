@@ -12,7 +12,8 @@ public class CameraFollow : MonoBehaviour {
     // Use this for initialization
 	void Start () {
          offset = transform.position - target.position;
-	}
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+    }
 
     private void FixedUpdate()
     {
