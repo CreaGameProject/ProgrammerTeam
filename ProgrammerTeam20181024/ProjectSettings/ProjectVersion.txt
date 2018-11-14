@@ -1,9 +1,5 @@
 <<<<<<< HEAD
-m_EditorVersion: 2018.2.15f1
-=======
-<<<<<<< HEAD
 m_EditorVersion: 2018.2.8f1
 =======
 m_EditorVersion: 2018.2.15f1
->>>>>>> base/survival_shooter
 >>>>>>> base/survival_shooter
