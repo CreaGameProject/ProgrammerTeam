@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 namespace CompleteProject
 {
@@ -17,11 +18,13 @@ namespace CompleteProject
         float timer;                                // Timer for counting up to the next attack.
 
 
+
+
         void Awake ()
         {
+            GameObject player;
             // Setting up the references.
-            player = GameObject.FindGameObjectWithTag ("Player");
-            playerHealth = player.GetComponent <PlayerHealth> ();
+            
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent <Animator> ();
         }
@@ -51,6 +54,10 @@ namespace CompleteProject
 
         void Update ()
         {
+
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerHealth = player.GetComponent<PlayerHealth>();
+            
             // Add the time since Update was last called to the timer.
             timer += Time.deltaTime;
 
@@ -67,6 +74,8 @@ namespace CompleteProject
                 // ... tell the animator the player is dead.
                 anim.SetTrigger ("PlayerDead");
             }
+            
+
         }
 
 
