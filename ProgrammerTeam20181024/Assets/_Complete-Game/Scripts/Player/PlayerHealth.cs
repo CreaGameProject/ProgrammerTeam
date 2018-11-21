@@ -34,7 +34,6 @@ namespace CompleteProject
 
             // Set the initial health of the player.
             currentHealth = startingHealth;
-            Debug.Log(currentHealth+"0");
         }
 
 
@@ -78,7 +77,6 @@ namespace CompleteProject
                 // ... it should die.
                 Death ();
             }
-            Debug.Log(currentHealth + "1");
         }
 
 
@@ -107,7 +105,6 @@ namespace CompleteProject
         {
             // Reload the level that is currently loaded.
             SceneManager.LoadScene (0);
-            Debug.Log(currentHealth + "2");
         }
     }
 }
