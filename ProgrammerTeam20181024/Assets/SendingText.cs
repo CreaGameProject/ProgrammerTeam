@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SendingText : MonoBehaviour {
 
+    [SerializeField] private Text text;
+
     IEnumerator Start()
     {
-        Debug.Log( "衝撃のファーストブリット" );
+        text.text = "衝撃のファーストブリット";
         yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
         yield return null;
 
-        Debug.Log( "撃滅のセカンドブリット" );
+        text.text = "撃滅のセカンドブリット";
         yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
         yield return null;
 
-        Debug.Log( "抹殺のラストブリット" );
+        text.text = "抹殺のラストブリット";
     }
 }
