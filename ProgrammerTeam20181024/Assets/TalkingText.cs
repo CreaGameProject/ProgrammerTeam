@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class TalkingText : MonoBehaviour {
 
-    Text textEdit;
+   
+    public Text textEdit;
     
     // Use this for initialization
 	void Start ()
     {
+
         StartCoroutine(TextController());
 	}
 	
