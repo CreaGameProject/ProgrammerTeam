@@ -6,17 +6,24 @@ using UnityEngine.UI;
 public class SendingText : MonoBehaviour {
 
     [SerializeField] private Text text;
+    [SerializeField] List<string> msg;
+    private List<string>.Enumerator enumerator;
 
     IEnumerator Start()
     {
-        text.text = "衝撃のファーストブリット";
+        enumerator = msg.GetEnumerator();
+
+        if ( enumerator.MoveNext() )
+            text.text = enumerator.Current;
         yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
         yield return null;
 
-        text.text = "撃滅のセカンドブリット";
+        if ( enumerator.MoveNext() )
+            text.text = enumerator.Current;
         yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
         yield return null;
 
-        text.text = "抹殺のラストブリット";
+        if ( enumerator.MoveNext() )
+            text.text = enumerator.Current;
     }
 }
