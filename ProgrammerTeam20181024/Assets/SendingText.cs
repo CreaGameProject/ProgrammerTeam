@@ -13,17 +13,30 @@ public class SendingText : MonoBehaviour {
     {
         enumerator = msg.GetEnumerator();
 
-        if ( enumerator.MoveNext() )
-            text.text = enumerator.Current;
+        StartCoroutine( "OnClick" );
         yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
         yield return null;
 
-        if ( enumerator.MoveNext() )
-            text.text = enumerator.Current;
+        StartCoroutine( "OnClick" );
         yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
         yield return null;
 
-        if ( enumerator.MoveNext() )
-            text.text = enumerator.Current;
+        StartCoroutine( "OnClick" );
+    }
+
+    public IEnumerator OnClick()
+    {
+        if ( !enumerator.MoveNext() )
+        {
+            yield break;
+        }
+
+        text.text = "";
+
+        foreach ( char item in enumerator.Current )
+        {
+            text.text += item;
+            yield return new WaitForSeconds( 0.1f );
+        }
     }
 }
