@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class SendingText : MonoBehaviour {
 
     [SerializeField] private Text text;
-    [SerializeField] List<string> msg;
+    [Header("int"), SerializeField] int a;
+    [SerializeField] private List<string> msg;
     private List<string>.Enumerator enumerator;
+    [HideInInspector] public string b;
 
     IEnumerator Start()
     {
