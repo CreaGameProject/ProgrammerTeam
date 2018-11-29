@@ -421,6 +421,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1049879416}
+  a: 0
+  msg:
+  - "\u885D\u6483\u306E\u30D5\u30A1\u30FC\u30B9\u30C8\u30D6\u30EA\u30C3\u30C8"
+  - "\u6483\u6EC5\u306E\u30BB\u30AB\u30F3\u30C9\u30D6\u30EA\u30C3\u30C8"
+  - "\u62B9\u6BBA\u306E\u30E9\u30B9\u30C8\u30D6\u30EA\u30C3\u30C8"
+  b: 
 --- !u!4 &1710319587
 Transform:
   m_ObjectHideFlags: 0
