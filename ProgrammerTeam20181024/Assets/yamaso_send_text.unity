@@ -144,6 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 1654437352}
+  body: {fileID: 0}
+  face: {fileID: 0}
+  atlas: {fileID: 0}
 --- !u!81 &664647726
 AudioListener:
   m_ObjectHideFlags: 0
