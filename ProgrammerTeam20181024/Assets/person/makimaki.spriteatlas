@@ -28,10 +28,19 @@ SpriteAtlas:
       enableRotation: 1
       enableTightPacking: 1
     variantMultiplier: 1
-    packables: []
+    packables:
+    - {fileID: 102900000, guid: 43a0a426107291c4992b90a0dfad521a, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5f8f2252e8958a84484e4a43206cae07, type: 3}
+  - {fileID: 21300000, guid: eaed2d0dbfb411b4f912a7cf396bf14b, type: 3}
+  - {fileID: 21300002, guid: eaed2d0dbfb411b4f912a7cf396bf14b, type: 3}
+  - {fileID: 21300004, guid: eaed2d0dbfb411b4f912a7cf396bf14b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - maki_body
+  - maki_1
+  - maki_2
+  - maki_3
   m_Tag: makimaki
   m_IsVariant: 0

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class Send_text : MonoBehaviour
 {
 
     [SerializeField] UnityEngine.UI.Text textbox;
-    [SerializeField] SpriteRenderer body, face;
+    [SerializeField] Image body, face;
 
     [SerializeField] SpriteAtlas atlas;
     IEnumerator Start()
