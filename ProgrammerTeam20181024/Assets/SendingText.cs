@@ -15,15 +15,14 @@ public class SendingText : MonoBehaviour {
     {
         enumerator = msg.GetEnumerator();
 
-        StartCoroutine( "OnClick" );
-        yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
+        yield return StartCoroutine( "OnClick" );
         yield return null;
 
-        StartCoroutine( "OnClick" );
-        yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
+        yield return StartCoroutine( "OnClick" );
         yield return null;
 
-        StartCoroutine( "OnClick" );
+        yield return StartCoroutine( "OnClick" );
+        yield return null;
     }
 
     public IEnumerator OnClick()
@@ -40,5 +39,7 @@ public class SendingText : MonoBehaviour {
             text.text += item;
             yield return new WaitForSeconds( 0.1f );
         }
+
+        yield return new WaitUntil( () => Input.GetMouseButtonDown( 0 ) );
     }
 }
