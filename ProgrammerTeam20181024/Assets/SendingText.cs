@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.U2D;
 
 public class SendingText : MonoBehaviour {
 
@@ -9,19 +10,25 @@ public class SendingText : MonoBehaviour {
     [Header("int"), SerializeField] int a;
     [SerializeField] private List<string> msg;
     private List<string>.Enumerator enumerator;
-    [SerializeField] private List<Sprite> sprite;
+    [SerializeField]SpriteRenderer body, face;
+
+    [SerializeField] SpriteAtlas atlas;
     [HideInInspector] public string b;
 
     IEnumerator Start()
     {
         enumerator = msg.GetEnumerator();
 
+        body.sprite = atlas.GetSprite("Sample_body");
+        face.sprite = atlas.GetSprite("Sample_face1");
         yield return StartCoroutine( "OnClick" );
         yield return null;
 
+        face.sprite = atlas.GetSprite("Sample_face2");
         yield return StartCoroutine( "OnClick" );
         yield return null;
 
+        face.sprite = atlas.GetSprite("Sample_face3");
         yield return StartCoroutine( "OnClick" );
         yield return null;
     }
