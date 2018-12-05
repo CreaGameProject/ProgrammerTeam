@@ -9,6 +9,7 @@ public class SendingText : MonoBehaviour {
     [Header("int"), SerializeField] int a;
     [SerializeField] private List<string> msg;
     private List<string>.Enumerator enumerator;
+    [SerializeField] private List<Sprite> sprite;
     [HideInInspector] public string b;
 
     IEnumerator Start()
