@@ -13,11 +13,11 @@ public class Story1 : MonoBehaviour
     IEnumerator Start()
     {
         textbox.text = "衝撃のファーストブリット";
-        face.sprite = atlas.GetSprite("sample_1");
+        face.sprite = atlas.GetSprite("sample_4");
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         yield return null;
 
-        face.sprite = atlas.GetSprite("sample_3");
+        face.sprite = atlas.GetSprite("sample_5");
         textbox.text = "撃滅のセカンドブリット";
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         yield return null;
