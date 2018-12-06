@@ -7,6 +7,7 @@ TextureImporter:
     21300004: sample_2
     21300006: sample_3
     21300008: sample_4
+    21300010: sample_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -92,10 +93,10 @@ TextureImporter:
       name: sample_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 116
-        width: 134
-        height: 267
+        x: 415
+        y: 299
+        width: 59
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,12 +119,12 @@ TextureImporter:
       name: sample_1
       rect:
         serializedVersion: 2
-        x: 304
-        y: 191
-        width: 78
-        height: 100
+        x: 313
+        y: 201
+        width: 51
+        height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,12 +139,12 @@ TextureImporter:
       name: sample_2
       rect:
         serializedVersion: 2
-        x: 177
+        x: 201
         y: 199
-        width: 102
-        height: 82
+        width: 54
+        height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,12 +159,12 @@ TextureImporter:
       name: sample_3
       rect:
         serializedVersion: 2
-        x: 286
-        y: 296
-        width: 106
-        height: 95
+        x: 305
+        y: 300
+        width: 51
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,10 +179,30 @@ TextureImporter:
       name: sample_4
       rect:
         serializedVersion: 2
-        x: 171
-        y: 296
-        width: 115
-        height: 93
+        x: 197
+        y: 297
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ae0a698f60e5848b9edf02a0e2379b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sample_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 104
+        width: 56
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ae0a698f60e5848b9edf02a0e2379b
+      spriteID: 83a16e8a332e8ad4985988f98ba6b3ff
       vertices: []
       indices: 
       edges: []
