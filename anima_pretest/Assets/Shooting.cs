@@ -12,19 +12,19 @@ public class Shooting : MonoBehaviour {
 
     public float survival_time = 5;
 
-    public float time;
+    //public float time;
 
 	// Use this for initialization
 	void Start () {
-        time = 0;
+        //time = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        time += Time.deltaTime;
+        //time += Time.deltaTime;
 
-        if (time>1f)
+        if (Input.GetKeyDown(KeyCode.F))
         {
             GameObject bullets = Instantiate(bullet) as GameObject;
 
@@ -38,7 +38,7 @@ public class Shooting : MonoBehaviour {
 
             Destroy(bullets, survival_time);
 
-            time = 0;
+            //time = 0;
         }
 
 
