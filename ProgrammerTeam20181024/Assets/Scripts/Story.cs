@@ -8,19 +8,27 @@ public class Story : MonoBehaviour
     [SerializeField] List<string> messages;
     [SerializeField] Text text;
     private List<string>.Enumerator enumerator;
-    //private string firstText;
+    [SerializeField] GameObject button;
 
     void Start()
     {
         enumerator = messages.GetEnumerator();
-        text.text = messages[0];
+        if(enumerator.MoveNext())
+        {
+            text.text = enumerator.Current;
+        }
     }
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && enumerator.MoveNext())
+        if (Input.GetMouseButtonDown(0) && enumerator.MoveNext())
         {
             text.text = enumerator.Current;
+        }
+
+        if (text.text == messages[2])
+        {
+            button.SetActive(true);
         }
     }
 }
