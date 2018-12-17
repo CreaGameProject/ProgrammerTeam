@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class GameManager : MonoBehaviour
         if (n == 0)
         {
             spriteManager.SpriteManage(count);
+        }
+
+        if (count == 510)
+        {
+            SceneManager.LoadScene("BaseBall");
         }
 
         Debug.Log(count);
