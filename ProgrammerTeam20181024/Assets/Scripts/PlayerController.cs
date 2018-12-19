@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
-        Debug.Log( tfCache.position + centerPos );
-        tfCache.position = Vector3.MoveTowards( tfCache.position, mousePos, 0.05f ) - centerPos;
+        tfCache.position = Vector3.MoveTowards( tfCache.position, mousePos, 0.02f );
         //if(Mathf.Abs( centerPosition.position.x) < limit &&)
     }
 }
