@@ -9,11 +9,13 @@ public class Story : MonoBehaviour
     [SerializeField] Text text;
     private List<string>.Enumerator enumerator;
     [SerializeField] GameObject button;
+    [SerializeField] GameObject ending;
 
     void Start()
     {
         enumerator = messages.GetEnumerator();
-        if(enumerator.MoveNext())
+
+        if (enumerator.MoveNext())
         {
             text.text = enumerator.Current;
         }
@@ -24,6 +26,11 @@ public class Story : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && enumerator.MoveNext())
         {
             text.text = enumerator.Current;
+        }
+
+        if (text.text == messages[2])
+        {
+            ending.SetActive(true);
         }
 
         if (text.text == messages[3])

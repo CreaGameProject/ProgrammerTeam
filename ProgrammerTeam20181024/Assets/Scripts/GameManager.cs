@@ -36,6 +36,5 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Baseball");
         }
 
-        Debug.Log(count);
     }
 }
