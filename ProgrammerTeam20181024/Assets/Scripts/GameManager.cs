@@ -13,10 +13,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         spriteManager = new SpriteManager();
-        if (SceneManager.GetSceneByName("Baseball").isLoaded)
-        {
-            PlayBaseBall();
-        }
     }
 
     void Update()
@@ -26,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void OnClick()
     {
-        count++;
+        count += 4;
 
         n = count % 100;
 
@@ -35,17 +31,11 @@ public class GameManager : MonoBehaviour
             spriteManager.SpriteManage(count);
         }
 
-        if (count == 510)
+        if (count >= 510)
         {
             SceneManager.LoadScene("Baseball");
         }
 
         Debug.Log(count);
     }
-
-    void PlayBaseBall()
-    {
-
-    }
-
 }

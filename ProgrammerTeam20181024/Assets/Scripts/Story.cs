@@ -26,7 +26,7 @@ public class Story : MonoBehaviour
             text.text = enumerator.Current;
         }
 
-        if (text.text == messages[2])
+        if (text.text == messages[3])
         {
             button.SetActive(true);
         }

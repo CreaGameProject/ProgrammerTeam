@@ -18,7 +18,14 @@ public class PlayBaseball : MonoBehaviour
 
     void Update()
     {
-
+        if (rand == 2 && !player.isPlaying)
+        {
+            SceneManager.LoadScene("Ending");
+        }
+        else if (!player.isPlaying)
+        {
+            SceneManager.LoadScene("EatHoney");
+        }
     }
 
     public void PlayMovie()
@@ -26,14 +33,5 @@ public class PlayBaseball : MonoBehaviour
         rand = Random.Range(0, 3);
         player.clip = video[rand];
         player.Play();
-
-        if(rand == 2 && !player.isPlaying)
-        {
-            SceneManager.LoadScene("Ending");
-        }
-        else if(!player.isPlaying)
-        {
-            SceneManager.LoadScene("EatHoney");
-        }
     }
 }
