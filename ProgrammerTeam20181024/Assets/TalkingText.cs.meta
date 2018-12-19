@@ -3,7 +3,11 @@ guid: 16b4f5136a601974d965db21e02b6469
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - textEdit: {instanceID: 0}
+  - body: {fileID: 212278527570983712, guid: c11246b2da516ce4fa086e904800931a, type: 2}
+  - face: {fileID: 212276023558067400, guid: 8ecbb72821c2b4d4b936fddd0e7c4c9b, type: 2}
+  - atlas: {fileID: 4343727234628468602, guid: a9e4c05a89c1e9741975a47624b0b064, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
