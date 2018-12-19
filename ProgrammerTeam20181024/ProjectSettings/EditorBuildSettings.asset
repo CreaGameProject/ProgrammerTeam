@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EatHoney.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/BaseBall.unity
+    path: Assets/Scenes/Baseball.unity
     guid: eeb747ec4bbc7df4fb2835d70376a9a6
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 1a46b108de0e76d468b1f7f8ebaaa077
   m_configObjects: {}

@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
+    private SpriteManager spriteManager;
     protected int count;
     private int n;
-    SpriteManager spriteManager;
 
     void Start()
     {
         spriteManager = new SpriteManager();
+        if (SceneManager.GetSceneByName("Baseball").isLoaded)
+        {
+            PlayBaseBall();
+        }
     }
 
     void Update()
@@ -32,10 +37,15 @@ public class GameManager : MonoBehaviour
 
         if (count == 510)
         {
-            SceneManager.LoadScene("BaseBall");
+            SceneManager.LoadScene("Baseball");
         }
 
         Debug.Log(count);
+    }
+
+    void PlayBaseBall()
+    {
+
     }
 
 }
