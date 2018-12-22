@@ -355,9 +355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1159613603294042, guid: fdd1ebfc57fba9a479791cdecf9917b2, type: 2}
   muzzle: {fileID: 1611839079}
-  speed: 100
+  speed: 1000
   survival_time: 5
-  time: 0
 --- !u!1 &1611839078
 GameObject:
   m_ObjectHideFlags: 0
