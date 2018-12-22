@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d31e93ca715ceb46ad9df60f3c8882a, type: 3}
-  m_Name: Kar98k
+  m_Name: S12K
   m_EditorClassIdentifier: 
   kindOfGun: 1
-  single: 1
-  gunName: Kar98k
-  range: 100
+  single: 0
+  gunName: S12K
+  range: 30
   power: 150
-  relordTime: 10
-  bringBullets: 35
-  maxBullets: 5
+  relordTime: 4
+  bringBullets: 14
+  maxBullets: 2

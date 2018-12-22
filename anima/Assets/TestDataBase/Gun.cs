@@ -11,7 +11,7 @@ public class Gun : ScriptableObject {
     //銃の種類の登録
     public enum KindOfGun
     {
-        SniperRifle=1,
+        SniperRifle,
         ShotGun
     }
 

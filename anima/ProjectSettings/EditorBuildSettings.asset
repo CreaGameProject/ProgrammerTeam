@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SelectOrEnhance/SelectOrEnhance.unity
+    guid: 0d2b4517f957db747b61f4551b5cb11a
+  - enabled: 1
+    path: Assets/SelectOrEnhance/Enhance.unity
+    guid: 4209bdb64fcf48941aaf170f22ca1737
+  - enabled: 1
+    path: Assets/SelectOrEnhance/Select.unity
+    guid: 5d396077b6d3f024eb5d17e6fcc80080
   m_configObjects: {}
