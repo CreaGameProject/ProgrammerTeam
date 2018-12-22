@@ -1,12 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnSRorSGbutton : MonoBehaviour {
 
-	public void Onclick()
-    {
+    public GameObject canvas;
+    public GameObject SR;
+    public GameObject SG;
 
+	public void SRButton()
+    {
+        canvas.SetActive(false);
+        SR.SetActive(true);
+    }
+
+    public void SGButton()
+    {
+        canvas.SetActive(false);
+        SG.SetActive(true);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("WeaponManager");
     }
 }
