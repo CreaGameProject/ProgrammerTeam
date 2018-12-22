@@ -16,10 +16,9 @@ public class GunManager : MonoBehaviour {
             Debug.Log(gunDataBase.GetGunLists()[i].GetGunName());
 
         }
-
+        gunDataBase.GetGunLists()[1].SetHave(true);
 	}
 	
-	// Update is called once per frame
 	public Gun GetItem(string searchName)
     {
         return gunDataBase.GetGunLists().Find(gunName => gunName.GetGunName() == searchName);

@@ -39,6 +39,9 @@ public class Gun : ScriptableObject {
     //最大装填弾数
     [SerializeField] private int maxBullets;
 
+    //持っているかどうか
+    [SerializeField] private bool have;
+
     //以下　銃の情報呼び出し
     public KindOfGun GetKindOfGun()
     {
@@ -59,6 +62,55 @@ public class Gun : ScriptableObject {
     public bool GetSingle()
     {
         return single;
+    }
+    public int GetRelordTime()
+    {
+        return relordTime;
+    }
+    public int GetBringBullets()
+    {
+        return bringBullets;
+    }
+    public int GetMaxBullets()
+    {
+        return maxBullets;
+    }
+    public bool GetHave()
+    {
+        return have;
+    }
+
+
+
+    //以下Set関数(必要なもののみ)
+    public void SetRange(int set)
+    {
+        range = set;
+    }
+    
+    public void SetPower(int set)
+    {
+        power = set;
+    }
+
+    public void SetHave(bool set)
+    {
+        have = set;
+    }
+
+    public void SetRelordTime(int set)
+    {
+        relordTime = set;
+    }
+
+    public void SetBringBullets(int set)
+    {
+        bringBullets = set;
+    }
+
+    public void SetMaxBullets(int set)
+    {
+        maxBullets = set;
     }
     
 }
