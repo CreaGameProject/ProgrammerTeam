@@ -26,4 +26,11 @@ public class EnSRorSGbutton : MonoBehaviour {
     {
         SceneManager.LoadScene("WeaponManager");
     }
+
+    public void Back2()
+    {
+        SG.SetActive(false);
+        SR.SetActive(false);
+        canvas.SetActive(true);
+    }
 }
