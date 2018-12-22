@@ -59,7 +59,7 @@ public class BallThrowing : MonoBehaviour {
                 break;
 
             case 2:
-            ballInstance.GetComponent<Rigidbody>().AddForce(ballInstance.transform.forward * ballPower * 8);
+            ballInstance.GetComponent<Rigidbody>().AddForce(ballInstance.transform.forward * ballPower *8);
                 break;
 
             case 3:
