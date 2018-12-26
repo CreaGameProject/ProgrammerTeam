@@ -17,6 +17,8 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private Sprite fallImage; //落下時の差し替え画像用
     private bool isTouched; //接地判定
     [SerializeField] private Vector2 respornPos;//リスポーン地点の設定
+    [SerializeField] GameObject pl;
+    [SerializeField] GameObject text;
 
     void Start()
     {
@@ -131,4 +133,15 @@ public class PlayerControler : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
     }
     
+    private void Updata()
+    {
+        if (pl.transform.position.x > 0.5 & pl.transform.position.x < 1.5 & pl.transform.position.y > 0.9 & pl.transform.position.y < 1.1)  
+        {
+            text.SetActive(true);
+            if (Input.GetKeyDown("Z"))
+            {
+                text.SetActive(false);
+            }
+        }
+    }
 }
