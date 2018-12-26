@@ -18,6 +18,8 @@ public class PlayerControler : MonoBehaviour
     private bool isTouched; //接地判定
     [SerializeField] private Vector2 respornPos;//リスポーン地点の設定
 
+    [SerializeField] ContactFilter2D filter2d;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -83,15 +85,15 @@ public class PlayerControler : MonoBehaviour
     //地面から離れた時の処理
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" )
         {
             isTouched = false;
         }
     }
     //地面についた時の処理
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" && rb.IsTouching( filter2d ) )
         {
             //ジャンプカウントを戻す
             jumpCount = startJumpCount;

@@ -338,6 +338,21 @@ Prefab:
       propertyPath: atackVector.y
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114004315345227464, guid: a6a719e5c62fff546b9e87e4e8fd89c5,
+        type: 2}
+      propertyPath: filter2d.useNormalAngle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004315345227464, guid: a6a719e5c62fff546b9e87e4e8fd89c5,
+        type: 2}
+      propertyPath: filter2d.minNormalAngle
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004315345227464, guid: a6a719e5c62fff546b9e87e4e8fd89c5,
+        type: 2}
+      propertyPath: filter2d.maxNormalAngle
+      value: 110
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a719e5c62fff546b9e87e4e8fd89c5, type: 2}
   m_IsPrefabParent: 0
@@ -357,7 +372,7 @@ GameObject:
   - component: {fileID: 1065680508}
   m_Layer: 0
   m_Name: thourght
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1699,7 +1714,7 @@ Tilemap:
   - first: {x: 24, y: 3, z: 0}
     second:
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2690,8 +2705,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300072, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 4
@@ -2712,8 +2727,8 @@ Tilemap:
     m_Data: {fileID: 21300050, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 37
     m_Data: {fileID: 21300002, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300072, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300070, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   m_TileMatrixArray:
