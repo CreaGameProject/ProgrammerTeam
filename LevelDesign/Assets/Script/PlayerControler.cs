@@ -19,6 +19,7 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private Vector2 respornPos;//リスポーン地点の設定
     [SerializeField] private GameObject cherry;
     [Range(0,5)]private int cherryCount;
+    [SerializeField] private GameObject clear;
 
     void Start()
     {
@@ -86,6 +87,7 @@ public class PlayerControler : MonoBehaviour
             Debug.Log(cherryCount);
             if(cherryCount == 5)
             {
+                clear.SetActive(true);
                 Debug.Log("Clear!");
             }
         }
