@@ -75,9 +75,9 @@ public class PlayerControler : MonoBehaviour
         {
             GameObject over_image = new GameObject("ダウンロード");
             over_image.transform.parent = GameObject.Find("Canvas").transform;
-            over_image.AddComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            over_image.AddComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 1);
             over_image.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-            Invoke("Resporn", 3.5f);
+            Invoke("Resporn", 1.5f);
         }
         if (collision.gameObject.tag == "Cherry")
         {
