@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private Vector2 respornPos;//リスポーン地点の設定
 
     [SerializeField] ContactFilter2D filter2d;
+    [SerializeField] Text scoreText;
+    int score;
 
     void Start()
     {
@@ -79,7 +82,10 @@ public class PlayerControler : MonoBehaviour
         }
         if (collision.gameObject.tag == "Cherry")
         {
+            score++;
+            scoreText.text = score.ToString();
             Debug.Log("Clear!");
+            Destroy( collision.gameObject );
         }
     }
     //地面から離れた時の処理
