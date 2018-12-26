@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class PlayerControler : MonoBehaviour
     private bool isTouched; //接地判定
     [SerializeField] private Vector2 respornPos;//リスポーン地点の設定
 
+    [SerializeField]
+    Canvas GameOver;
+    float time;
+    [SerializeField]
+    float waitTime;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -27,6 +34,7 @@ public class PlayerControler : MonoBehaviour
         animator.SetFloat("RunSpeed", 0.0f);
         startJumpCount = jumpCount;
         rb.gravityScale = fallSpeed;
+        GameOver.enabled = false;
     }
 
     // Update is called once per frame
@@ -73,7 +81,15 @@ public class PlayerControler : MonoBehaviour
     {
         if (collision.gameObject.tag == "DeathArea")
         {
-            transform.position = respornPos;
+            GameOver.enabled = true;
+            //time = Time.time;
+            
+
+            //if (Time.time - time >= waitTime)
+            {
+                transform.position = respornPos;
+                GameOver.enabled = false;
+            }
         }
         if (collision.gameObject.tag == "Cherry")
         {
