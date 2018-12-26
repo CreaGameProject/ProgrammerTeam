@@ -73,12 +73,20 @@ public class PlayerControler : MonoBehaviour
     {
         if (collision.gameObject.tag == "DeathArea")
         {
-            transform.position = respornPos;
+            GameObject over_image = new GameObject("ダウンロード");
+            over_image.transform.parent = GameObject.Find("Canvas").transform;
+            over_image.AddComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            over_image.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            Invoke("Resporn", 3.5f);
         }
         if (collision.gameObject.tag == "Cherry")
         {
             Debug.Log("Clear!");
         }
+    }
+    void Resporn()
+    {
+        transform.position = respornPos;
     }
     //地面から離れた時の処理
     private void OnCollisionExit2D(Collision2D collision)
