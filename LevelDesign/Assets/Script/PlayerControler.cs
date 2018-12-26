@@ -17,6 +17,8 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private Sprite fallImage; //落下時の差し替え画像用
     private bool isTouched; //接地判定
     [SerializeField] private Vector2 respornPos;//リスポーン地点の設定
+    [SerializeField] private GameObject cherry;
+    [Range(0,5)]private int cherryCount;
 
     void Start()
     {
@@ -27,6 +29,8 @@ public class PlayerControler : MonoBehaviour
         animator.SetFloat("RunSpeed", 0.0f);
         startJumpCount = jumpCount;
         rb.gravityScale = fallSpeed;
+
+        cherryCount = 0;
     }
 
     // Update is called once per frame
@@ -59,7 +63,7 @@ public class PlayerControler : MonoBehaviour
             animator.SetBool("IsClouch", false);
             rb.gravityScale = fallSpeed;
         }
-        
+       
         if (rb.velocity.y < 0)
         {
             animator.enabled = false;
@@ -77,7 +81,13 @@ public class PlayerControler : MonoBehaviour
         }
         if (collision.gameObject.tag == "Cherry")
         {
-            Debug.Log("Clear!");
+            Destroy(collision.gameObject);
+            cherryCount++;
+            Debug.Log(cherryCount);
+            if(cherryCount == 5)
+            {
+                Debug.Log("Clear!");
+            }
         }
     }
     //地面から離れた時の処理
