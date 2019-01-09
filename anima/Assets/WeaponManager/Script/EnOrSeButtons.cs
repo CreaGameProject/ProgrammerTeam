@@ -22,6 +22,6 @@ public class EnOrSeButtons : MonoBehaviour
     {
 
         //シーン"home"の名前を一致させてね
-        SceneManager.LoadScene("Home");
+        SceneManager.LoadScene("Base");
     }
 }
