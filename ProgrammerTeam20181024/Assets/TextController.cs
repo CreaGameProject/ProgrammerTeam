@@ -7,7 +7,7 @@ using System.IO;
 public class TextController : MonoBehaviour
 {
 
-    TextAsset csvFile;
+    TextAsset csv;
     public string story;
     [SerializeField] Text uiText;   // uiTextへの参照
     [SerializeField] List<string> Stories = new List<string>();
@@ -28,8 +28,8 @@ public class TextController : MonoBehaviour
 
     void Start()
     {
-        csvFile = Resources.Load(story) as TextAsset;
-        StringReader reder = new StringReader(csvFile.text);
+        csv = Resources.Load(story) as TextAsset;
+        StringReader reder = new StringReader(csv.text);
         while (reder.Peek() != -1)
         {
             string line = reder.ReadLine();
