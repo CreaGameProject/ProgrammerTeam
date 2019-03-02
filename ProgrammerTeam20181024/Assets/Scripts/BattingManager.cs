@@ -14,38 +14,38 @@ public class BattingManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        swing = false;
-        homePos = transform.rotation;
+        //swing = false;
+        //homePos = transform.rotation;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            swingEnd = false;
-            swing = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    swingEnd = false;
+        //    swing = true;
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            swing = false;
-            swingEnd = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    swing = false;
+        //    swingEnd = true;
+        //}
 	}
 
     private void FixedUpdate()
     {
-        if (swing == true)
-        {
-            BatSwing();
-        }
+        //if (swing == true)
+        //{
+        //    BatSwing();
+        //}
 
-        if (swingEnd == true)
-        {
-            Stanby();
+        //if (swingEnd == true)
+        //{
+        //    Stanby();
 
-        }
+        //}
     }
 
     private void BatSwing()
