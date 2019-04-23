@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> cards;
     void Start()
     {
         
@@ -15,10 +14,14 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private GameObject SelectCard()
+    private void InstantiateCards()
     {
-        GameObject card = cards[Random.Range(0, cards.Count)];
-        cards.Remove(card);
-        return card;
+        for(int i = 0; i < 4; i++)
+        {
+            for(int j = 0; j < 13; j++)
+            {
+
+            }
+        }
     }
 }
