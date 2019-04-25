@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private bool isShooting;
     [SerializeField] private float sensitivity;//感度
     [SerializeField] private float shootSpan;//発射レート
-    [SerializeField] private GameObject card;
+    //[SerializeField] private GameObject card;
     [SerializeField] private List<GameObject> cards;
     [SerializeField] private GameObject muzzle;
     [SerializeField] private GameObject gun;
@@ -23,17 +23,20 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //射撃の切り替え
         if (Input.GetKeyDown(KeyCode.Mouse0))
             isShooting = true;
         if (Input.GetKeyUp(KeyCode.Mouse0))
             isShooting = false;
+        //回転
         float y = Input.GetAxis("Mouse X");
         float x = Input.GetAxis("Mouse Y");
         transform.Rotate(0, y * sensitivity, 0);
         gun.transform.Rotate(-x, 0, 0);
     }
+    
 
-
+    //Resourcesフォルダからカードのオブジェクトを一括ロード
     private IEnumerator LoadCards()
     {
         for(int i = 0; i < 4; i++)
@@ -85,6 +88,9 @@ public class Player : MonoBehaviour
         }
     }
 
+    //射撃の制御
+    //左クリックを押したときに射撃開始
+    //左クリックを離したときに射撃終了
     private IEnumerator ControlShooting()
     {
         while (true)
@@ -101,10 +107,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    //ロードしたカードのオブジェクトからランダムに選び、射撃する
     private void ShootCard()
     {
         GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], muzzle.transform.position, gun.transform.rotation);
-        card.GetComponent<Rigidbody>().AddForce(transform.forward * 50, ForceMode.VelocityChange);
+        card.GetComponent<Rigidbody>().AddForce(card.transform.forward * 50, ForceMode.VelocityChange);
         
     }
 

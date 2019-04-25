@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        //前回出てきたNavMeshを利用
         player = GameObject.Find("Player");
         meshAgent.SetDestination(player.transform.position);
     }

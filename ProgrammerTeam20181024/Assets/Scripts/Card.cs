@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    [HideInInspector] public string cardNum;//カードの名前
-
-    
-
-
     void Start()
     {
+        //Resourceフォルダ内の全カードオブジェクトにBoxColliderを手作業で追加するのは
+        //しんどすぎたので、生成された瞬間に各自で追加するように変更
         gameObject.AddComponent<BoxCollider>();
         GetComponent<BoxCollider>().isTrigger = true;
         StartCoroutine(WaitAndDestroy());
@@ -21,17 +18,14 @@ public class Card : MonoBehaviour
         
     }
 
-    public void Turn()
-    {
-        //StartCoroutine(TurnCor());
-    }
-
+    //10秒たったら自動的に消えるように設定
     private IEnumerator WaitAndDestroy()
     {
         yield return new WaitForSeconds(10);
         Destroy(gameObject);
     }
 
+    //ただの当たり判定
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
@@ -40,10 +34,4 @@ public class Card : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
-    //public IEnumerator TurnCor()
-    //{
-
-    //}
 }

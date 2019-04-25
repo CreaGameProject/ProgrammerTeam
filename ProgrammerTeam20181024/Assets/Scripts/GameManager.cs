@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //敵のCubeオブジェクト
+    [SerializeField] private GameObject enemy;
     void Start()
     {
-        
+        InstantiateEnemies(10);
     }
 
     void Update()
@@ -14,14 +16,14 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void InstantiateCards()
+    //引数の回数だけ敵のブロックを、生成位置をランダムに選んで生成
+    private void InstantiateEnemies(int count)
     {
-        for(int i = 0; i < 4; i++)
+        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("Respawn");
+        for(int i = 0; i < count; i++)
         {
-            for(int j = 0; j < 13; j++)
-            {
-
-            }
+            Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
         }
     }
+
 }
